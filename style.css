@@ -1,0 +1,222 @@
+:root {
+  /* main bg */
+  --very-dark-blue: hsl(233, 47%, 7%);
+  /* card bh */
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  /* accent color - violet */
+  --soft-violet: hsl(277, 64%, 61%);
+
+  /* white - main heading & stats */
+  --white: hsl(0, 0%, 100%);
+  /* main paragraph */
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* stats heading */
+  /* --slightly-transparent- */
+}
+.attribution {
+  margin: 15px 0;
+
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+p {
+  font-size: 1.6rem;
+  color: var(--slightly-transparent-white);
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  font-family: sans-serif;
+}
+
+h1,
+h3 {
+  color: var(--white);
+  font-family: "Inter";
+}
+
+h1 {
+  font-size: 3.7rem;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 40px 30px;
+}
+
+/* Left Side Stats */
+
+.stats-content {
+  background-color: var(--dark-desaturated-blue);
+  height: 446px;
+  width: 540px;
+  padding: 60px 80px 60px 60px;
+  border-radius: 10px 0 0 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stats-content h1 {
+  margin-bottom: 25px;
+}
+
+.stats-content span {
+  color: var(--soft-violet);
+}
+
+.stats-content p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-family: "Lexend Deca";
+}
+
+.stats-content .bottom .statistics h3 {
+  font-size: 2.3rem;
+}
+
+.stats-content .bottom .statistics p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+.stats-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-content .bottom {
+  margin-top: auto;
+}
+
+.stats-content .statistics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-right: 55px;
+  padding-top: 10px;
+}
+
+.stat-content .bottom .statistics .stat {
+  padding-right: 10px;
+}
+
+/* Right Side Image */
+
+.image-container {
+  background: url(/images/image-header-desktop.jpg);
+  /* background-color: var(--soft-violet);
+  opacity: 0.8; */
+  height: 446px;
+  width: 540px;
+  z-index: 1;
+  border-radius: 0 10px 10px 0;
+}
+
+.accent-overlay {
+  background-color: hsla(277, 64%, 61%, 0.5);
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+}
+
+/* Mobile - Only really looks right on ipad size  */
+
+@media only screen and (max-width: 870px) {
+  body {
+    height: 140vh;
+  }
+
+  h1 {
+    font-size: 3.9rem;
+  }
+
+  .container {
+    height: 120vh;
+    justify-content: flex-end;
+    margin-top: 70px;
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+  .stats-content {
+    height: 800px;
+  }
+
+  .stats-content,
+  .image-container {
+    margin: 0 30px;
+  }
+
+  .image-container {
+    background: url(/images/image-header-mobile.jpg);
+  }
+
+  .image-container,
+  .accent-overlay {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .stats-content {
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+  }
+  .stats-content .statistics {
+    padding-right: 0;
+    margin-top: 0;
+    padding-top: 30px;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .stats-content .bottom {
+    margin-top: 0;
+    height: 400px;
+  }
+
+  .stats-content p {
+    font-size: 2.3rem;
+    line-height: 3rem;
+  }
+  .stats-content .bottom .statistics h3 {
+    font-size: 4rem;
+  }
+  .stat-content .bottom .statistics p {
+    font-size: 2.5rem;
+    margin-top: 10px;
+  }
+}
